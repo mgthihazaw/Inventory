@@ -21,25 +21,25 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="nav">
                   <li class="nav-item">
-                    <a class="nav-link active">Create CPAT</a>
+                    <router-link class="nav-link active" to="/create">Create CPAT</router-link>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link">Tech Items</a>
+                    <router-link class="nav-link" to="/">Tech Items</router-link>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link">Descriptions</a>
+                    <router-link class="nav-link" to="/descriptions">Descriptions</router-link>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link">Model</a>
+                    <router-link class="nav-link" to="/brands">Model</router-link>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link">Manufactures</a>
+                    <router-link class="nav-link" to="/manufactures">Manufactures</router-link>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link">Locations</a>
+                    <router-link class="nav-link" to="/locations">Locations</router-link>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link">Categories</a>
+                  <li class="nav-item" >
+                    <router-link class="nav-link" to="/categories">Categories</router-link>
                   </li>
                 </ul>
                 
