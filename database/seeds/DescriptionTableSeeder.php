@@ -12,15 +12,15 @@ class DescriptionTableSeeder extends Seeder
     public function run()
     {
         DB::table('descriptions')->truncate();
-        $str = 'abcdefghijklmnopqrst ';
+        
         
 
 
         $descriptions = [
-          ['name' => str_shuffle($str)],
-          ['name' => str_shuffle($str)],
-          ['name' => str_shuffle($str)],
-          ['name' => str_shuffle($str)],
+          ['name' => 'CPU'],
+          ['name' => 'Laptop'],
+          ['name' => 'Monitor'],
+          ['name' => 'System Unit'],
         ];
 
         DB::table('descriptions')->insert($descriptions);

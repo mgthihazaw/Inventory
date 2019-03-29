@@ -4,80 +4,80 @@ namespace App\Http\Controllers\api;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Product;
 
 class ProductsController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+   
     public function index()
     {
-        //
+        $products=Product::with([
+         'manufacture'=> function($query){
+            $query->select(['id','name']);
+        },
+        'description'=> function($query){
+            $query->select(['id','name']);
+        },
+        'location'=> function($query){
+            $query->select(['id','name']);
+        },
+        'category'=> function($query){
+            $query->select(['id','name']);
+        },
+        'brand'=> function($query){
+            $query->select(['id','name']);
+        }])->orderBy('created_at','desc')->get();
+        return response()->json([
+            'products' => $products
+        ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     public function create()
     {
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+   
     public function store(Request $request)
     {
-        //
+
+       foreach($request->products as $key => $value){
+         Product::updateOrCreate([
+            'quantity'=>$value['quantity'] ,
+            'serial'=>$value['serial'] ,
+            'manufacture_id'=>$value['manufacture'] ,
+            'description_id'=>$value['description'],
+            'location_id'=>$value['location'] ,
+            'category_id'=>$value['category'],
+            'brand_id'=>$value['model'],
+            'status'=>$value['status']
+
+         ]);
+       };
+       return response()->json('Successfully Created');
+       
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    
     public function show($id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    
     public function edit($id)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+ 
     public function update(Request $request, $id)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+   
     public function destroy($id)
     {
         //

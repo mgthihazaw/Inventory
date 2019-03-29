@@ -13,10 +13,10 @@ class LocationTableSeeder extends Seeder
     {
           DB::table('locations')->truncate();
         $locations = [
-          ['name' => 'Mandalay'],
-          ['name' => 'Sagaing'],
-          ['name' => 'Yangon'],
-          ['name' => 'Shan'],
+          ['name' => 'Mandalay','BU'=>'PHA14' ,'OU'=> 'P4'],
+          ['name' => 'Sagaing','BU'=>'AUM34' ,'OU'=> 'P3'],
+          ['name' => 'Yangon','BU'=>'CMP7' ,'OU'=> 'P4'],
+          ['name' => 'Shan','BU'=>'CHI89' ,'OU'=> 'P1'],
         ];
 
         DB::table('locations')->insert($locations);

@@ -12,15 +12,18 @@ class ManufactureTableSeeder extends Seeder
     public function run()
     {
         DB::table('manufactures')->truncate();
-        $str = 'abcdefghijklmnopqrst ';
+        
         
 
 
         $manufactures = [
-          ['name' => str_shuffle($str)],
-          ['name' => str_shuffle($str)],
-          ['name' => str_shuffle($str)],
-          ['name' => str_shuffle($str)],
+          ['name' => 'HP'],
+          ['name' => 'Dell'],
+          ['name' => 'ACER'],
+          ['name' => 'Hawei'],
+          ['name' => 'MI'],
+          ['name' => 'Sony'],
+          ['name' => 'Apple'],
         ];
 
         DB::table('manufactures')->insert($manufactures);

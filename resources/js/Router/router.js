@@ -10,6 +10,8 @@ import Categories from '../components/Categories/index.vue'
 import Descriptions from '../components/Descriptions/index.vue'
 import Locations from '../components/Locations/index.vue'
 import Manufactures from '../components/Manufactures/index.vue'
+import Products from '../components/Products/index.vue'
+import CreateProduct from '../components/Products/create.vue'
 
 
 const routes = [
@@ -18,6 +20,8 @@ const routes = [
   { path: '/descriptions', component: Descriptions ,name: 'descriptions'},
   { path: '/locations', component: Locations ,name: 'locations'},
   { path: '/manufactures', component: Manufactures ,name: 'manufactures'},
+  { path: '/products', component: Products ,name: 'products'},
+  { path: '/products/create', component: CreateProduct ,name: 'createProduct'},
   
  
 ]

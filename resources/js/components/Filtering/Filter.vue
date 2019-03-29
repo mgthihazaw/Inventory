@@ -1,5 +1,6 @@
 <template>
 	<div>
+		
 		<table id="example" class="table table-striped table-bordered">
 			<thead>
 				<tr>
@@ -22,6 +23,7 @@
 				</tr>
 			</tbody>
 		</table>
+		
 	</div>
 </template>
 

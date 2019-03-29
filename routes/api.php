@@ -13,3 +13,5 @@ Route::apiResource('/locations','api\LocationsController');
 Route::apiResource('/descriptions','api\DescriptionsController');
 Route::apiResource('/categories','api\CategoriesController');
 Route::apiResource('/manufactures','api\ManufacturesController');
+Route::apiResource('/products','api\ProductsController');
+Route::apiResource('/transfers','api\TransfersController');

@@ -20,6 +20,7 @@
         "vue": "^2.5.7"
     },
     "dependencies": {
+        "v-hotkey": "^0.3.0",
         "vue-router": "^3.0.2"
     }
 }
